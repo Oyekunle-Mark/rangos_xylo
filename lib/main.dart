@@ -9,16 +9,14 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$noteNumber.wav');
   }
 
-  Widget buildKey({Color keyColor, int noteNumber}) {
-    return Expanded(
-      child: FlatButton(
-        color: keyColor,
-        onPressed: () {
-          playSound(noteNumber);
-        },
-      ),
-    );
-  }
+  Widget buildKey({Color keyColor, int noteNumber}) => Expanded(
+        child: FlatButton(
+          color: keyColor,
+          onPressed: () {
+            playSound(noteNumber);
+          },
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
