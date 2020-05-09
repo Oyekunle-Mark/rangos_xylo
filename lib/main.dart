@@ -9,7 +9,7 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$noteNumber.wav');
   }
 
-  Widget buildKey(Color keyColor, int noteNumber) {
+  Widget buildKey({Color keyColor, int noteNumber}) {
     return Expanded(
       child: FlatButton(
         color: keyColor,
@@ -29,13 +29,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              buildKey(Colors.red, 1),
-              buildKey(Colors.orange, 2),
-              buildKey(Colors.green, 3),
-              buildKey(Colors.yellow, 4),
-              buildKey(Colors.blue, 5),
-              buildKey(Colors.indigo, 6),
-              buildKey(Colors.purple, 7),
+              buildKey(keyColor: Colors.red, noteNumber: 1),
+              buildKey(keyColor: Colors.orange, noteNumber: 2),
+              buildKey(keyColor: Colors.green, noteNumber: 3),
+              buildKey(keyColor: Colors.yellow, noteNumber: 4),
+              buildKey(keyColor: Colors.blue, noteNumber: 5),
+              buildKey(keyColor: Colors.indigo, noteNumber: 6),
+              buildKey(keyColor: Colors.purple, noteNumber: 7),
             ],
           ),
         ),
